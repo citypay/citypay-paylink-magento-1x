@@ -1,0 +1,305 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * @category	CityPay
+ * @package	CityPay_PayLink
+ * @copyright	Copyright (c) 2014 CityPay (http://www.citypay.com/)
+ */
+-->
+<config>
+  <sections>
+    <payment>
+      <groups>
+        <paylink_cc translate="label" module="paylink">
+          <label>CityPay PayLink</label>
+          <frontend_type>text</frontend_type>
+          <sort_order>1</sort_order>
+          <show_in_default>1</show_in_default>
+          <show_in_website>1</show_in_website>
+	  <show_in_store>0</show_in_store>
+	  <comment><![CDATA[<a href="http://www.citypay.com/" target="_blank">Click here to apply for a CityPay account</a>]]></comment>
+          <fields>
+            <payselect translate="label">
+              <label>Payment selection</label>
+              <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+              <sort_order>1</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </payselect>
+            <active translate="label">
+              <label>Enabled</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>2</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </active>
+            <title translate="label">
+              <label>Title</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>3</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </title>
+            <allowspecific translate="label">
+              <label>Payment to applicable countries</label>
+              <frontend_type>allowspecific</frontend_type>
+              <sort_order>4</sort_order>
+              <source_model>adminhtml/system_config_source_payment_allspecificcountries</source_model>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </allowspecific>
+            <specificcountry translate="label">
+              <label>Payment to Specific countries</label>
+              <frontend_type>multiselect</frontend_type>
+              <sort_order>5</sort_order>
+              <source_model>adminhtml/system_config_source_country</source_model>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </specificcountry>
+
+            <tran_settings translate="label">
+              <label>Transaction settings</label>
+              <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+              <sort_order>10</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </tran_settings>
+
+            <tran_desc translate="label">
+              <label>Description</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>11</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+	      <show_in_store>0</show_in_store>
+            </tran_desc>
+            <order_status translate="label">
+              <label>New order status</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_order_status_processing</source_model>
+              <sort_order>12</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </order_status>
+            <transaction_testmode translate="label">
+              <label>Test Mode</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>13</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </transaction_testmode>
+
+            <heading_currency1 translate="label">
+              <label>Account settings</label>
+              <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+              <sort_order>20</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </heading_currency1>
+            <currency1 translate="label">
+              <label>Currency</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_currency</source_model>
+              <sort_order>21</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </currency1>
+            <merchant_id1 translate="label">
+              <label>Merchant ID</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>22</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </merchant_id1>
+            <licence_key1 translate="label">
+              <label>Licence Key</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>23</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </licence_key1>
+
+            <heading_currency2 translate="label">
+              <label>Account settings (2nd currency)</label>
+              <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+              <sort_order>30</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </heading_currency2>
+            <currency2 translate="label">
+              <label>Currency</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_currency</source_model>
+              <sort_order>31</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </currency2>
+            <merchant_id2 translate="label">
+              <label>Merchant ID</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>32</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </merchant_id2>
+            <licence_key2 translate="label">
+              <label>Licence Key</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>33</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </licence_key2>
+
+            <heading_currency3 translate="label">
+              <label>Account settings (3rd currency)</label>
+              <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+              <sort_order>40</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </heading_currency3>
+            <currency3 translate="label">
+              <label>Currency</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_currency</source_model>
+              <sort_order>41</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </currency3>
+            <merchant_id3 translate="label">
+              <label>Merchant ID</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>42</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </merchant_id3>
+            <licence_key3 translate="label">
+              <label>Licence Key</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>43</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </licence_key3>
+
+            <heading_currency4 translate="label">
+              <label>Account settings (4th currency)</label>
+              <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+              <sort_order>50</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </heading_currency4>
+            <currency4 translate="label">
+              <label>Currency</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_currency</source_model>
+              <sort_order>51</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </currency4>
+            <merchant_id4 translate="label">
+              <label>Merchant ID</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>52</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </merchant_id4>
+            <licence_key4 translate="label">
+              <label>Licence Key</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>53</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </licence_key4>
+
+            <heading_currency5 translate="label">
+              <label>Account settings (5th currency)</label>
+              <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+              <sort_order>60</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </heading_currency5>
+            <currency5 translate="label">
+              <label>Currency</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_currency</source_model>
+              <sort_order>61</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </currency5>
+            <merchant_id5 translate="label">
+              <label>Merchant ID</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>62</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </merchant_id5>
+            <licence_key5 translate="label">
+              <label>Licence Key</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>63</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </licence_key5>
+
+            <heading_postback translate="label">
+              <label>Postback filter</label>
+              <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+              <sort_order>100</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </heading_postback>
+            <server_ip translate="label">
+              <label>Server IP list </label>
+              <frontend_type>text</frontend_type>
+              <sort_order>101</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+	      <show_in_store>0</show_in_store>
+            </server_ip>
+          </fields>
+        </paylink_cc>
+      </groups>
+    </payment>
+  </sections>
+</config>

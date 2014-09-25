@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package>
+    <name>CityPay_PayLink</name>
+    <version>1.1.0.0</version>
+    <stability>stable</stability>
+    <license>Open Software License</license>
+    <channel>Community</channel>
+    <extends/>
+    <summary>CityPay PayLink payment module</summary>
+    <description>Take payments using the CityPay PayLink gateway.&#xD;
+&#xD;
+CityPay are a PCI DSS Level 1 certified payment gateway accredited by UK and European Acquiring banks to process credit and debit card transitions.&#xD;
+</description>
+    <notes>Public release of payment module for CityPay PayLink.&#xD;
+</notes>
+    <authors><author><name>CityPay</name><user>CityPay</user><email>support@citypay.com</email></author></authors>
+    <date>2014-04-22</date>
+    <time>19:17:17</time>
+    <contents><target name="magecommunity"><dir name="CityPay"><dir name="PayLink"><dir name="Block"><file name="Cancel.php" hash="8f2ee8fd97fe192b1c8d8fbb3ad3731c"/><file name="Failure.php" hash="e71ec28b514d92a668e105e8d6f413fc"/><file name="Form.php" hash="c4a2504e23947a4f5a304191f069d959"/><file name="Info.php" hash="e7545ab3bf215627a6da875ae77d1fef"/><file name="Redirect.php" hash="7aac53817a08d06393b87e31c1434681"/><file name="Success.php" hash="489cab28853acb3438922ee12d9460e4"/></dir><dir name="Helper"><file name="Data.php" hash="1f362fcb67704e139c6331810dfecd5f"/></dir><dir name="Model"><file name="Cc.php" hash="9d98292a8bcf6fb227edc5eed02dcc0d"/><dir name="Source"><file name="RequestType.php" hash="697cfc73220222a8cf28128612240375"/></dir></dir><dir name="controllers"><file name="ProcessingController.php" hash="d62464d992ac1890d654804fd00dd1d1"/></dir><dir name="etc"><file name="config.xml" hash="d8e102b039c80ced095303f0275d9184"/><file name="system.xml" hash="98599ce255abd973aa538f26e502807b"/></dir></dir></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="template"><dir name="paylink"><file name="info.phtml" hash="05f4aedb5addd0e95174fbead2bfad94"/><dir name="pdf"><file name="info.phtml" hash="baca1ec6d88eb4357f7b00f2b8e58d61"/></dir></dir></dir></dir></dir></dir><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="paylink.xml" hash="00675a1467815b7a11f15d7af1b297a4"/></dir><dir name="template"><dir name="paylink"><file name="blank.phtml" hash="18c29ba6bfe6af256e978fdad2fa6043"/><file name="cancel.phtml" hash="22a0148140b82fb50c58031b6807bcb6"/><file name="failure.phtml" hash="9ec6bab2615162b0c6ec2bbec64bff3f"/><file name="form.phtml" hash="f4d6d3ccdb3c059fd56c40779fa6ed96"/><file name="info.phtml" hash="a626432c8e6d5715f79eb4f5807d57f9"/><file name="redirect.phtml" hash="162c786fa5181be41a16530624b175b5"/></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="CityPay_PayLink.xml" hash="c03b8aaf72a67543317a733fdac34cd3"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.3.2</min><max>6.0.0</max></php></required></dependencies>
+</package>
